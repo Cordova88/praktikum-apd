@@ -32,5 +32,6 @@ print (f"Jumlah suhu setelah di konversi adalah {jumlah}")
 print (f"Rata-rata dari jumlah keenam suhu tadi adalah {rata2}")
 
 NIM = 55
+print(f"NIM:  {NIM}")
 boolean = NIM < rata2
-print(boolean)
+print(f"NIM < rata-rata: {boolean}")
