@@ -1,0 +1,12 @@
+Penjelasan langkah Langkah git
+
+git add . 
+berfungsi untuk menambahkan file atau perubahan ke staging area, sebelum disimpan 
+permanen
+
+git commit
+befungsi untuk menyimpan perubahan yang sudah ada di staging area ke dalam repository
+Git beserta pesan (message) sebagai catatan perubahan
+
+git push
+berfungsi untuk mengirim atau (upload) commit dari repository local ke repositor
