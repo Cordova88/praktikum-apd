@@ -13,25 +13,25 @@ reamur2 = (4/5) * suhu[-1]
 
 print (suhu)
 
-print("== Hasil konversi suhu ke-1 dan ke-2 dari Celcius ke Farhenheit ==")
+print("\n== Hasil konversi suhu ke-1 dan ke-2 dari Celcius ke Farhenheit ==")
 print(f"{suhu[0]} Celcius = {farhenheit1} Farhenheit")
 print(f"{suhu[1]} Celcius = {farhenheit2} Farhenheit")
 
-print("== Hasil konversi suhu ke-3 dan ke-4 dari Celcius ke Kelvin ==")
+print("\n== Hasil konversi suhu ke-3 dan ke-4 dari Celcius ke Kelvin ==")
 print(f"{suhu[-4]} Celcius = {kelvin1} Kelvin")
 print(f"{suhu[-3]} Celcius = {kelvin2} Kelvin")
 
-print("== Hasil konversi suhu ke-5 dan ke-6 dari Celcius ke Reamur ==")
+print("\n== Hasil konversi suhu ke-5 dan ke-6 dari Celcius ke Reamur ==")
 print(f"{suhu[-2]} Celcius = {reamur1} Reamur")
 print(f"{suhu[-1]} Celcius = {reamur2} Reamur")
 
 jumlah = farhenheit1+farhenheit2+kelvin1+kelvin2+reamur1+reamur2
 rata2 =  jumlah/len(suhu)
 
-print (f"Jumlah suhu setelah di konversi adalah {jumlah}")
+print (f"\nJumlah suhu setelah di konversi adalah {jumlah}")
 print (f"Rata-rata dari jumlah keenam suhu tadi adalah {rata2}")
 
 NIM = 55
-print(f"NIM:  {NIM}")
+print(f"\nNIM:  {NIM}")
 boolean = NIM < rata2
 print(f"NIM < rata-rata: {boolean}")
