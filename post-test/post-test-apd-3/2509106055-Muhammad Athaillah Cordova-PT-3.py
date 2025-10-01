@@ -108,7 +108,6 @@ if username == "Cordova" and password == "055":
             myrtoidr = float(input("Masukkan Ringgit: "))
             hasil = myrtoidr * 3.9510
             print ((f"{myrtoidr} Ringgit ==> {hasil} Rupiah"))
-
 elif username != "Cordova" and  password == "055":
     print("Username salah")
 elif username == "Cordova" and password != "055":
