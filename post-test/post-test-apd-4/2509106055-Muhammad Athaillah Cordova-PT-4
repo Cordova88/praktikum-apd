@@ -1,18 +1,74 @@
 
 # # form login
-print ("=== Login Terlebih dahulu ===")
+# print ("=== Login Terlebih dahulu ===")
 
-username = input("\nMasukkan Username:").lower()
-password = input("Masukkan Password:")
+# username = input("\nMasukkan Username:").lower()
+# password = input("Masukkan Password:")
 
-while username != "Cordova" and password != "055":
-    print("LOGIN GAGAL!!!")
-    username = input("\nMasukkan Username:").lower()
-    password = input("Masukkan Password:")
-    # if username == "Cordova" and password != "055":
-    #     print("Username Salah")
-    # elif username != "Cordova" and password == "055":
-    #     print("Password salah")
-print(">>LOGIN BERHASIL<<")
+# while username != "cordova" or password != "055":
+#     print("LOGIN GAGAL!!!")
+#     if username != "cordova" and password == "055":
+#         print("=Username SALAH")
+#     elif username == "cordova" and password != "055":
+#         print("=Password SALAH")
+#     else:
+#         print("==Username Dan Password SALAH")
+
+#     username = input("\nMasukkan Username:").lower()
+#     password = input("Masukkan Password:")
+
+# print(">>LOGIN BERHASIL<<")
+
+print("\nGolongan Darah")
+
+goldar = input("Masukkan Golongan Darah:")
+goldarAp = 0
+goldarAm = 0
+goldarBp = 0
+goldarBm = 0
+goldarABp = 0
+goldarABm = 0
+goldarOp = 0
+goldarOm = 0
+
+while goldar != "A" or goldar != "B" or goldar != "AB" or goldar != "O":
+    if goldar == "A":
+        input ("A+ atau A- :")
+        if goldar == "+":
+            hasilAp = goldarAp + 1
+            if goldar == "-":
+                hasilAm = goldarAm + 1
+    if goldar == "B":
+        input ("B+ atau B- :")
+        if goldar == "+":
+            hasilBp = goldarBp + 1
+            if goldar == "-":
+                hasilBm = goldarBm + 1
+    if goldar == "AB":
+        input ("AB+ atau AB- :")
+        if goldar == "+":
+            hasilABp = goldarABp + 1
+            if goldar == "-":
+                hasilABm = goldarABm + 1
+    if goldar == "O":
+        input ("O+ atau O- :")
+        if goldar == "+":
+            hasilOp = goldarOp + 1
+            if goldar == "-":
+                hasilOm = goldarOm + 1
+    
+    konfirmasi = input("Apakah anda masih ingin menginput? (Y/N):")
+    if konfirmasi == "N":
+        break
+    goldar = input("Masukkan Golongan Darah:")
+
+# print(hasilAp)
+# print(hasilAm)
+# print(hasilBp)
+# print(hasilBm)
+# print(hasilABp)
+# print(hasilABm)
+# print(hasilOp)
+# print(hasilOm)
 
 
