@@ -1,0 +1,18 @@
+
+# # form login
+print ("=== Login Terlebih dahulu ===")
+
+username = input("\nMasukkan Username:").lower()
+password = input("Masukkan Password:")
+
+while username != "Cordova" and password != "055":
+    print("LOGIN GAGAL!!!")
+    username = input("\nMasukkan Username:").lower()
+    password = input("Masukkan Password:")
+    # if username == "Cordova" and password != "055":
+    #     print("Username Salah")
+    # elif username != "Cordova" and password == "055":
+    #     print("Password salah")
+print(">>LOGIN BERHASIL<<")
+
+
