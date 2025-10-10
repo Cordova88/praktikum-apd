@@ -1,5 +1,5 @@
 
-# # form login
+# form login
 # print ("=== Login Terlebih dahulu ===")
 
 # username = input("\nMasukkan Username:").lower()
@@ -19,7 +19,7 @@
 
 # print(">>LOGIN BERHASIL<<")
 
-print("\nGolongan Darah")
+# print("\nGolongan Darah")
 
 goldar = input("Masukkan Golongan Darah:")
 goldarAp = 0
@@ -36,32 +36,40 @@ while goldar != "A" or goldar != "B" or goldar != "AB" or goldar != "O":
         input ("A+ atau A- :")
         if goldar == "+":
             hasilAp = goldarAp + 1
-            if goldar == "-":
-                hasilAm = goldarAm + 1
-    if goldar == "B":
+        if goldar == "-":
+            hasilAm = goldarAm + 1
+    elif goldar == "B":
         input ("B+ atau B- :")
         if goldar == "+":
             hasilBp = goldarBp + 1
-            if goldar == "-":
-                hasilBm = goldarBm + 1
-    if goldar == "AB":
+        if goldar == "-":
+            hasilBm = goldarBm + 1
+    elif goldar == "AB":
         input ("AB+ atau AB- :")
         if goldar == "+":
             hasilABp = goldarABp + 1
-            if goldar == "-":
-                hasilABm = goldarABm + 1
-    if goldar == "O":
+        if goldar == "-":
+            hasilABm = goldarABm + 1
+    elif goldar == "O":
         input ("O+ atau O- :")
         if goldar == "+":
             hasilOp = goldarOp + 1
-            if goldar == "-":
-                hasilOm = goldarOm + 1
-    
-    konfirmasi = input("Apakah anda masih ingin menginput? (Y/N):")
-    if konfirmasi == "N":
-        break
-    goldar = input("Masukkan Golongan Darah:")
+        if goldar == "-":
+            hasilOm = goldarOm + 1
+    else:
+        print("Masukkan Golonngan Darah Dengan Benar !")
+        goldar = input("\nMasukkan Golongan Darah:")
 
+    konfirmasi = input("Apakah anda masih ingin menginput? (Y/T):") 
+    if konfirmasi == "Y":
+        print("mantap darah denis cuan")
+    elif konfirmasi == "T":
+        print("SELESAI")
+        break
+    else:
+        konfirmasi = input("Y/T!!")
+        break
+    goldar = input("\nMasukkan Golongan Darah:")
 # print(hasilAp)
 # print(hasilAm)
 # print(hasilBp)
