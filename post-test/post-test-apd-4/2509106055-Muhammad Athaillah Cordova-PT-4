@@ -1,5 +1,5 @@
 
-# form login
+# # form login
 print ("=== Login Terlebih dahulu ===")
 
 username = input("\nMasukkan Username:").lower()
@@ -13,13 +13,12 @@ while username != "cordova" or password != "055":
         print("=Password SALAH")
     else:
         print("==Username Dan Password SALAH")
-
     username = input("\nMasukkan Username:").lower()
     password = input("Masukkan Password:")
 
 print(">>LOGIN BERHASIL<<")
 
-print("\nGolongan Darah")
+print("\n== Golongan Darah ==")
 
 goldarAp = 0
 goldarAm = 0
@@ -42,7 +41,7 @@ while True:
         continue
     rhesus = input("Masukkan Rhesus nya (+/-):").strip()
     if rhesus == "":
-        print("Harap Masukkan golongan rhesus!!!")
+        print("Harap Masukkan kategori rhesus!!!")
         continue
     elif rhesus == "+" or rhesus == "-":
         pass
@@ -56,11 +55,11 @@ while True:
         print("Harap Masukkan Jumlah Kantong Darah!!")
         continue
     elif not Kantdarah.isdigit():
-        print("Input Berupa Angka!!")
+        print("Input Berupa Angka, dan Bilangan bulat!!")
         continue
     Kantdarah = int(Kantdarah)
     if Kantdarah <= 0:
-        print("Kantong Darah lebih dari 0")
+        print("Input berupa bilangan postif!!")
         continue
 
     voldarah = Kantdarah * 500
@@ -82,9 +81,10 @@ while True:
         goldarOm += voldarah
 
 
-    konfirmasi = input("Apakah anda masih ingin menginput darah ? (Y/T):").upper()
+    konfirmasi = input("\nApakah anda masih ingin menginput darah ? (Y/T):").upper()
     if konfirmasi == "":
         print("INVALID, Input Kosong, Program Berhenti")
+        break
     elif konfirmasi == "T":
         print("== SELESAI ==")
         print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah A+: {goldarAp} ml")
