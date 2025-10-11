@@ -1,27 +1,26 @@
 
 # form login
-# print ("=== Login Terlebih dahulu ===")
+print ("=== Login Terlebih dahulu ===")
 
-# username = input("\nMasukkan Username:").lower()
-# password = input("Masukkan Password:")
+username = input("\nMasukkan Username:").lower()
+password = input("Masukkan Password:")
 
-# while username != "cordova" or password != "055":
-#     print("LOGIN GAGAL!!!")
-#     if username != "cordova" and password == "055":
-#         print("=Username SALAH")
-#     elif username == "cordova" and password != "055":
-#         print("=Password SALAH")
-#     else:
-#         print("==Username Dan Password SALAH")
+while username != "cordova" or password != "055":
+    print("LOGIN GAGAL!!!")
+    if username != "cordova" and password == "055":
+        print("=Username SALAH")
+    elif username == "cordova" and password != "055":
+        print("=Password SALAH")
+    else:
+        print("==Username Dan Password SALAH")
 
-#     username = input("\nMasukkan Username:").lower()
-#     password = input("Masukkan Password:")
+    username = input("\nMasukkan Username:").lower()
+    password = input("Masukkan Password:")
 
-# print(">>LOGIN BERHASIL<<")
+print(">>LOGIN BERHASIL<<")
 
-# print("\nGolongan Darah")
+print("\nGolongan Darah")
 
-goldar = input("Masukkan Golongan Darah:")
 goldarAp = 0
 goldarAm = 0
 goldarBp = 0
@@ -31,52 +30,72 @@ goldarABm = 0
 goldarOp = 0
 goldarOm = 0
 
-while goldar != "A" or goldar != "B" or goldar != "AB" or goldar != "O":
-    if goldar == "A":
-        input ("A+ atau A- :")
-        if goldar == "+":
-            hasilAp = goldarAp + 1
-        if goldar == "-":
-            hasilAm = goldarAm + 1
-    elif goldar == "B":
-        input ("B+ atau B- :")
-        if goldar == "+":
-            hasilBp = goldarBp + 1
-        if goldar == "-":
-            hasilBm = goldarBm + 1
-    elif goldar == "AB":
-        input ("AB+ atau AB- :")
-        if goldar == "+":
-            hasilABp = goldarABp + 1
-        if goldar == "-":
-            hasilABm = goldarABm + 1
-    elif goldar == "O":
-        input ("O+ atau O- :")
-        if goldar == "+":
-            hasilOp = goldarOp + 1
-        if goldar == "-":
-            hasilOm = goldarOm + 1
+while True: 
+    goldar = input("Masukkan Golongan Darah (A, B, AB, O):").strip().upper()
+    if goldar == "":
+        print("Harap Masukkan golongan darah!!!")
+        continue
+    elif goldar == "A" or goldar == "B" or goldar == "AB" or goldar == "O":
+        pass
     else:
-        print("Masukkan Golonngan Darah Dengan Benar !")
-        goldar = input("\nMasukkan Golongan Darah:")
+        print("INVALID")
+        continue
+    rhesus = input("Masukkan Rhesus nya (+/-):").strip()
+    if rhesus == "":
+        print("Harap Masukkan golongan rhesus!!!")
+        continue
+    elif rhesus == "+" or rhesus == "-":
+        pass
+    else:
+        print("INVALID")
+        continue
+    print(F"Golongan Darah {goldar}{rhesus}")
 
-    konfirmasi = input("Apakah anda masih ingin menginput? (Y/T):") 
-    if konfirmasi == "Y":
-        print("mantap darah denis cuan")
+    Kantdarah = input("\nMasukkan Jumlah Kantong Darah:")
+    if Kantdarah == "":
+        print("Harap Masukkan Jumlah Kantong Darah!!")
+        continue
+    elif not Kantdarah.isdigit():
+        print("Input Berupa Angka!!")
+        continue
+    Kantdarah = int(Kantdarah)
+    if Kantdarah <= 0:
+        print("Kantong Darah lebih dari 0")
+        continue
+
+    voldarah = Kantdarah * 500
+    if goldar == "A" and rhesus == "+":
+        goldarAp += voldarah
+    elif goldar == "A" and rhesus == "-":
+        goldarAm += voldarah
+    elif goldar == "B" and rhesus == "+":
+        goldarBp += voldarah
+    elif goldar == "B" and rhesus == "-":
+        goldarBm += voldarah
+    elif goldar == "AB" and rhesus == "+":
+        goldarABp += voldarah
+    elif goldar == "AB" and rhesus == "-":
+        goldarABm += voldarah
+    elif goldar == "O" and rhesus == "+":
+        goldarOp += voldarah
+    elif goldar == "O" and rhesus == "-":
+        goldarOm += voldarah
+
+
+    konfirmasi = input("Apakah anda masih ingin menginput darah ? (Y/T):").upper()
+    if konfirmasi == "":
+        print("INVALID, Input Kosong, Program Berhenti")
     elif konfirmasi == "T":
-        print("SELESAI")
+        print("== SELESAI ==")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah A+: {goldarAp} ml")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah A-: {goldarAm} ml")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah B+: {goldarBp} ml")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah B-: {goldarBm} ml")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah AB+: {goldarABp} ml")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah AB-: {goldarABm} ml")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah O+: {goldarOp} ml")
+        print(f" Total Volume yang didapat dari kantong darah Dengan Golongan darah O-: {goldarOm} ml")
         break
-    else:
-        konfirmasi = input("Y/T!!")
+    elif konfirmasi != "Y":
+        print("INVALID, Input Salah ,Program Berhenti")
         break
-    goldar = input("\nMasukkan Golongan Darah:")
-# print(hasilAp)
-# print(hasilAm)
-# print(hasilBp)
-# print(hasilBm)
-# print(hasilABp)
-# print(hasilABm)
-# print(hasilOp)
-# print(hasilOm)
-
-
