@@ -40,6 +40,12 @@ print(rumah[:-1])
 
 print("tambah")
 
+biodata ={
+    "nama":"Cordova",
+    "umur":"18",
+    "nim":"2509106055"
+}
+
 
 
 
