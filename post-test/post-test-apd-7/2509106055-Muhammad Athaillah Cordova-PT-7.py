@@ -159,7 +159,7 @@ def kirim_tiket():
     print("\nTerima Kasih Atas Pesan yang anda kirim kami akan Segera Menanggapi nya")
     input("\nTekan ENTER untuk kembali")
 
-def baca_keluhan():
+def baca_tiket():
     clear()
     print (batas1)
     print()
@@ -211,6 +211,7 @@ def tambah_game():
     except ValueError:
         print("\nINVALID Input Wajib sebuah Angka")
         input("\nTekan ENTER Untuk Kembali")
+        return
     else:
         if 0 <= pilihan_tambah < len(dev_list):
             nom_dev = dev_list[pilihan_tambah]
@@ -455,7 +456,7 @@ def tampilan_admin():
         elif menu_admin == "4":
             katalog_admin()
         elif menu_admin == "5":
-            baca_keluhan()
+            baca_tiket()
         elif menu_admin == "6":
             konfir = input("\nApakah Anda yakin (Y/N): ").lower()
             if konfir == "y":
